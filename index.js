@@ -1,6 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-import session from "express-session"; // ✔ IMPORT CORRIGIDO
+import session from "express-session";
 
 const host = "0.0.0.0";
 const porta = 4000;
@@ -12,7 +12,7 @@ server.use(session({
     secret: 'segredo',
     resave: false,
     saveUninitialized: false,
-    cookie: { maxAge: 1000 * 60 * 30 } // ✔ CONFIGURAÇÃO DO COOKIE CORRIGIDA
+    cookie: { maxAge: 1000 * 60 * 30 }
 }))
 
 server.use(express.urlencoded({ extended: true }));
@@ -355,7 +355,6 @@ res.send(conteudo);
 });
 
 server.get('/login', (req, res) => {
-    // ✔ FORMULÁRIO CORRIGIDO — ADICIONADOS NAMES usuario/senha
     res.send(`
         <form class="row g-3 needs-validation" method="POST" action="/login" novalidate>
   <div class="col-md-4">
@@ -373,7 +372,6 @@ server.get('/login', (req, res) => {
         ` );
 });
 
-// ✔ ROTINA DE LOGIN CORRIGIDA
 server.post('/login', (req, res) => {
     const { usuario, senha } = req.body;
 
@@ -388,13 +386,11 @@ server.post('/login', (req, res) => {
     `);
 });
 
-// ✔ ROTA /logout ADICIONADA
 server.get("/logout", (req, res) => {
     req.session.destroy(() => {
         res.redirect("/login");
     });
 });
-
 
 function verificaAutenticacao(req, res, next) {
     if (req.session?.autenticado) {
