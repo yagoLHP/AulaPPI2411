@@ -1,0 +1,29 @@
+{
+  "name": "2411",
+  "version": "1.0.0",
+  "description": "Aula 24/11",
+  "keywords": [
+    "HTTP",
+    "PPI"
+  ],
+  "homepage": "https://github.com/yagoLHP/AulaPPI2411#readme",
+  "bugs": {
+    "url": "https://github.com/yagoLHP/AulaPPI2411/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagoLHP/AulaPPI2411.git"
+  },
+  "license": "ISC",
+  "author": "Yago",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express-session": "^1.18.2"
+  }
+}
