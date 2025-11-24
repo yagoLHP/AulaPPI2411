@@ -400,8 +400,9 @@ function verificaAutenticacao(req, res, next) {
     }
 }
 
-/*server.listen(porta, host, () => {
+server.listen(porta, host, () => {
 console.log(`Servidor rodando em http://${host}:${porta}`);
-})*/
-export default server;
+})
+
+
 
