@@ -3,7 +3,7 @@ import cookieParser from "cookie-parser";
 import session from "express-session";
 
 const host = "0.0.0.0";
-const porta = 4000;
+const porta = 1213;
 var listaUsuarios = [];
 
 const server = express();
